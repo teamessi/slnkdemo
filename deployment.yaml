@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rh-app
+  name: rh-app
 spec:
-  selector:
-    matchLabels:
-      app: rh-app
-  replicas: 1 # tells deployment to run 2 pods matching the template
-  template:
-    metadata:
-      labels:
-        app: rh-app
-    spec:
-      containers:
-      - name: rh-app
-        image: richardharveyslnk/nginxv1:latest
-        ports:
-        - containerPort: 8200
+  selector:
+    matchLabels:
+      app: rh-app
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: rh-app
+    spec:
+      containers:
+      - name: rh-app
+        image: richardharveyslnk/nginxv1:latest
+        ports:
+        - containerPort: 80
